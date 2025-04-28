@@ -1,20 +1,8 @@
-const buyBtn = document.getElementById('buyBtn');
-const checkoutForm = document.getElementById('checkoutForm');
-const orderForm = document.getElementById('orderForm');
-const orderSuccess = document.getElementById('orderSuccess');
-const orderNumber = document.getElementById('orderNumber');
+const buyButtons = document.querySelectorAll('.buy-btn');
 
-buyBtn.addEventListener('click', () => {
-    checkoutForm.classList.remove('hidden');
-    window.scrollTo({ top: checkoutForm.offsetTop, behavior: 'smooth' });
-});
-
-orderForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const randomOrderNum = 'ORD' + Math.floor(100000 + Math.random() * 900000);
-    orderNumber.textContent = randomOrderNum;
-    
-    orderForm.classList.add('hidden');
-    orderSuccess.classList.remove('hidden');
+buyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert("Please complete your payment to KBZ Pay (09777581733) and upload your payment screenshot!");
+        // Future - Redirect to checkout form
+    });
 });
