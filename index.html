@@ -3,294 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barmaso - Online Shopping</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-        }
-        
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px 0;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff6b6b;
-        }
-        
-        .search-bar {
-            flex-grow: 1;
-            margin: 0 20px;
-        }
-        
-        .search-bar input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        .user-actions a {
-            margin-left: 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding-top: 15px;
-        }
-        
-        nav ul li {
-            margin-right: 20px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-        
-        .banner {
-            height: 400px;
-            background-color: #ff6b6b;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            background-image: url('https://via.placeholder.com/1200x400');
-            background-size: cover;
-        }
-        
-        .banner-content {
-            text-align: center;
-        }
-        
-        .banner h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .banner button {
-            padding: 10px 25px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .products-section {
-            padding: 40px 0;
-        }
-        
-        .section-title {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        
-        .product-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .product-image {
-            height: 200px;
-            background-color: #eee;
-            background-image: url('https://via.placeholder.com/300');
-            background-size: cover;
-        }
-        
-        .product-info {
-            padding: 15px;
-        }
-        
-        .product-title {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        
-        .product-price {
-            font-weight: bold;
-            color: #ff6b6b;
-        }
-        
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 0;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        
-        .footer-column h3 {
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #ddd;
-            text-decoration: none;
-        }
-    </style>
+    <title>Orchid Malaysia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-top">
-                <div class="logo">BARMASO</div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for products...">
-                </div>
-                <div class="user-actions">
-                    <a href="#">Login</a>
-                    <a href="#">Wishlist</a>
-                    <a href="#">Cart (0)</a>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Deals</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </nav>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">Orchid Malaysia</div>
+        <nav class="nav" id="nav-menu">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
-    
-    <main class="container">
-        <section class="banner">
-            <div class="banner-content">
-                <h1>Summer Sale - Up to 50% Off</h1>
-                <button>Shop Now</button>
-            </div>
-        </section>
-        
-        <section class="products-section">
-            <h2 class="section-title">Featured Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Premium Wireless Headphones</h3>
-                        <p class="product-price">$99.99</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Smart Watch Series 5</h3>
-                        <p class="product-price">$199.99</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Bluetooth Speaker</h3>
-                        <p class="product-price">$59.99</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-title">Wireless Charging Pad</h3>
-                        <p class="product-price">$29.99</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Orchid Malaysia</h1>
+            <p>Luxury Orchids for a luxury lifestyle.</p>
+            <a href="#about" class="btn">Discover More</a>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Shop</h3>
-                    <ul>
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">Featured</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Sale Items</a></li>
-                    </ul>
+            <h2>About Us</h2>
+            <p>Orchid Malaysia specializes in the finest orchid plants and floral designs, delivering across Malaysia and internationally.</p>
+        </div>
+    </section>
+
+    <section class="services section" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Orchid Sales</h3>
+                    <p>Top quality orchids for home, office, and gifts.</p>
                 </div>
-                <div class="footer-column">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+                <div class="service-item">
+                    <h3>Custom Arrangements</h3>
+                    <p>Personalized floral designs for every occasion.</p>
                 </div>
-                <div class="footer-column">
-                    <h3>Customer Service</h3>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect With Us</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Pinterest</a></li>
-                    </ul>
+                <div class="service-item">
+                    <h3>Corporate Services</h3>
+                    <p>Floral solutions for businesses and hotels.</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="Image/placeholder1.jpg" alt="Gallery Image 1">
+                <img src="Image/placeholder2.jpg" alt="Gallery Image 2">
+                <img src="Image/placeholder3.jpg" alt="Gallery Image 3">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Orchid Malaysia. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
