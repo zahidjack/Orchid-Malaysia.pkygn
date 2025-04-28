@@ -80,6 +80,55 @@ body {
     background-color: #c29e2b;
 }
 
+/* Checkout Form */
+.checkout-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-form input, .checkout-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submitBtn {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.submitBtn:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+#orderSuccess {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#orderSuccess a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     .product-card img {
