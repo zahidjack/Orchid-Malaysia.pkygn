@@ -12,62 +12,42 @@
     <h1>Pakistan Clothing Collection</h1>
 </header>
 
-<main class="product-grid">
-    <div class="product-card">
-        <img src="Image/product1.jpg" alt="Elegant Dress 1">
-        <div class="product-info">
-            <h2>Elegant Dress 1</h2>
-            <p class="price">45,000 MMK</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="Image/product2.jpg" alt="Elegant Dress 2">
-        <div class="product-info">
-            <h2>Elegant Dress 2</h2>
-            <p class="price">49,000 MMK</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="Image/product3.jpg" alt="Elegant Dress 3">
-        <div class="product-info">
-            <h2>Elegant Dress 3</h2>
-            <p class="price">55,000 MMK</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="Image/product4.jpg" alt="Elegant Dress 4">
-        <div class="product-info">
-            <h2>Elegant Dress 4</h2>
-            <p class="price">42,000 MMK</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="Image/product5.jpg" alt="Elegant Dress 5">
-        <div class="product-info">
-            <h2>Elegant Dress 5</h2>
-            <p class="price">50,000 MMK</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="Image/product6.jpg" alt="Elegant Dress 6">
-        <div class="product-info">
-            <h2>Elegant Dress 6</h2>
-            <p class="price">47,000 MMK</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-    </div>
-
+<main class="product-grid" id="productGrid">
+    <!-- Product Cards here -->
 </main>
+
+<div id="checkoutForm" class="checkout-form hidden">
+    <h2>Complete Your Order</h2>
+    <form id="orderForm">
+        <input type="text" id="customerName" placeholder="Your Name" required>
+        <input type="text" id="customerAddress" placeholder="Shipping Address" required>
+        <input type="text" id="customerPhone" placeholder="Phone Number" required>
+
+        <label for="sizeSelect">Select Size:</label>
+        <select id="sizeSelect" required>
+            <option value="">Select</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+        </select>
+
+        <h3>Payment Info</h3>
+        <p>Pay KBZ Pay to: <strong>09777581733</strong> (Nay Zar Thein)</p>
+
+        <label for="paymentScreenshot">Upload Payment Screenshot:</label>
+        <input type="file" id="paymentScreenshot" accept="image/*" required>
+
+        <button type="submit" class="submitBtn">Submit Order</button>
+    </form>
+
+    <div id="orderSuccess" class="hidden">
+        <h2>Order Completed!</h2>
+        <p>Your Order Number: <span id="orderNumber"></span></p>
+        <p>Kindly send your order number with payment screenshot on our 
+            <a href="https://www.facebook.com/" target="_blank">Facebook Page</a>.</p>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
