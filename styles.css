@@ -1,72 +1,88 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     padding: 20px;
 }
 
-.product {
+.header {
     text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
-.product img {
-    width: 100%;
-    max-width: 300px;
+.header h1 {
+    font-size: 2.5rem;
+    color: #555;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .price {
-    font-size: 1.5rem;
     color: #d4af37;
-    margin: 10px 0;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-select, input[type="text"], input[type="file"] {
-    width: 90%;
-    padding: 10px;
+    font-size: 1.1rem;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-button, .submitBtn {
+.buy-btn {
     background-color: #d4af37;
-    color: #000;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-button:hover, .submitBtn:hover {
+.buy-btn:hover {
     background-color: #c29e2b;
 }
 
-.checkout-form {
-    margin-top: 30px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.hidden {
-    display: none;
-}
-
-#orderSuccess {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#orderSuccess a {
-    color: #007bff;
-    text-decoration: underline;
+/* Responsive */
+@media (max-width: 600px) {
+    .product-card img {
+        height: 250px;
+    }
 }
